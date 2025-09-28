@@ -1,11 +1,11 @@
 import spacy
 
 def carregar_modelo():
-    """Carrega o modelo spaCy para português."""
+    """Carrega o modelo spaCy para inglês."""
     try:
-        return spacy.load("pt_core_news_lg")
+        return spacy.load("en_core_web_lg")
     except OSError as e:
-        raise RuntimeError("Modelo 'pt_core_news_lg' não encontrado. Execute: python -m spacy download pt_core_news_lg") from e
+        raise RuntimeError("Modelo 'en_core_web_lg' não encontrado. Execute: python -m spacy download en_core_web_lg") from e
 
 NLP = carregar_modelo()
 
